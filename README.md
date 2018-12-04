@@ -9,4 +9,3 @@ Easy app moving and resizing using modifier keys and mouse movement for macOS
 - Onboarding (Accessibility instructions)
 - Start on login
 - Multiple monitor support (test if any issues)
-untitled:Untitled-1
