@@ -2,10 +2,17 @@ import Cocoa
 
 let allModifierFlags = NSEvent.ModifierFlags([.shift, .control, .option, .command])
 
+func modifiersAreExactly(modifiers: NSEvent.ModifierFlags, event: NSEvent) -> Bool {
+    let otherFlags = allModifierFlags.subtracting(modifiers)
+    return event.modifierFlags.isSuperset(of: modifiers) && event.modifierFlags.isDisjoint(with: otherFlags)
+}
+
 func isMoveEvent(event: NSEvent) -> Bool {
-    let moveFlags = NSEvent.ModifierFlags([.command, .shift])
-    let otherFlags = allModifierFlags.subtracting(moveFlags)
-    return event.modifierFlags.isSuperset(of: moveFlags) && event.modifierFlags.isDisjoint(with: otherFlags)
+    return modifiersAreExactly(modifiers: [.command, .shift], event: event)
+}
+
+func isResizeEvent(event: NSEvent) -> Bool {
+    return modifiersAreExactly(modifiers: [.option, .shift], event: event)
 }
 
 func calculateNewWindowPosition(mousePosition: NSPoint, trackingState: TrackingState) -> NSPoint {
@@ -14,15 +21,26 @@ func calculateNewWindowPosition(mousePosition: NSPoint, trackingState: TrackingS
         y: mousePosition.y - trackingState.startMousePosition.y
     )
     return NSPoint(
-        x: trackingState.startWindowPosition.x + mouseOffset.x,
-        y: trackingState.startWindowPosition.y + mouseOffset.y
+        x: trackingState.startWindowFrame.minX + mouseOffset.x,
+        y: trackingState.startWindowFrame.minY + mouseOffset.y
+    )
+}
+
+func calculateNewWindowSize(mousePosition: NSPoint, trackingState: TrackingState) -> NSSize {
+    let mouseOffset = NSPoint(
+        x: mousePosition.x - trackingState.startMousePosition.x,
+        y: mousePosition.y - trackingState.startMousePosition.y
+    )
+    return NSSize(
+        width: trackingState.startWindowFrame.width + mouseOffset.x,
+        height: trackingState.startWindowFrame.height + mouseOffset.y
     )
 }
 
 struct TrackingState {
-    var startWindowPosition: NSPoint
+    var startWindowFrame: CGRect
     var startMousePosition: NSPoint
-    var trackedWindow: AXUIElement
+    var window: AXUIElement
 }
 
 @NSApplicationMain
@@ -70,11 +88,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func createTrackingState(mousePosition: NSPoint) -> TrackingState? {
         guard let window = CocoaHelper.getWindowAt(point: mousePosition) else { return nil }
-        guard let windowPosition = CocoaHelper.getWindowPosition(window: window) else { return nil }
+        guard let windowFrame = CocoaHelper.getWindowFrame(window: window) else { return nil }
+        
         return TrackingState(
-            startWindowPosition: windowPosition,
+            startWindowFrame: windowFrame,
             startMousePosition: mousePosition,
-            trackedWindow: window
+            window: window
         )
     }
     
@@ -83,7 +102,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func handleMouseMove(event: NSEvent) {
-        guard isMoveEvent(event: event) else {
+        guard isMoveEvent(event: event) || isResizeEvent(event: event) else {
             stopTracking()
             return
         }
@@ -95,9 +114,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
         
-        let newWindowPosition = calculateNewWindowPosition(mousePosition: mousePosition, trackingState: trackingState)
+        if isMoveEvent(event: event) {
+            
+            let newPosition = calculateNewWindowPosition(mousePosition: mousePosition, trackingState: trackingState)
+            CocoaHelper.setWindowPosition(element: trackingState.window, value: newPosition)
+            
+        } else if isResizeEvent(event: event) {
+            
+            let newSize = calculateNewWindowSize(mousePosition: mousePosition, trackingState: trackingState)
+            CocoaHelper.setWindowSize(element: trackingState.window, value: newSize)
+            
+        }
         
-        CocoaHelper.setWindowPosition(element: trackingState.trackedWindow, attribute: NSAccessibility.Attribute.position, value: newWindowPosition)
     }
     
     func showPopover(sender: Any?) {
