@@ -8,11 +8,13 @@ func modifiersAreExactly(modifiers: NSEvent.ModifierFlags, event: NSEvent) -> Bo
 }
 
 func isMoveEvent(event: NSEvent) -> Bool {
-    return modifiersAreExactly(modifiers: [.command, .shift], event: event)
+    let moveKeys = Settings.load().moveKeys
+    return modifiersAreExactly(modifiers: moveKeys, event: event)
 }
 
 func isResizeEvent(event: NSEvent) -> Bool {
-    return modifiersAreExactly(modifiers: [.option, .shift], event: event)
+    let resizeKeys = Settings.load().resizeKeys
+    return modifiersAreExactly(modifiers: resizeKeys, event: event)
 }
 
 func calculateNewWindowPosition(mousePosition: NSPoint, trackingState: TrackingState) -> NSPoint {
@@ -60,7 +62,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named: NSImage.Name("status-bar-icon"))
             button.action = #selector(togglePopover(_:))
         }
-        popover.contentViewController = PopoverViewController.freshController()
+        popover.contentViewController = PopoverViewController.instantiate()
         
         // Configure click event monitor for closing the popover
         clickEventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in

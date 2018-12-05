@@ -14,6 +14,7 @@
 		2F0FCE6B21B45AB300219A96 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FCE6A21B45AB300219A96 /* EventMonitor.swift */; };
 		2F0FCE6D21B69D9800219A96 /* AccessibilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FCE6C21B69D9800219A96 /* AccessibilityHelper.swift */; };
 		2F0FCE9021B724BC00219A96 /* CocoaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FCE8F21B724BC00219A96 /* CocoaHelper.swift */; };
+		2F2D223921B84E6A00239030 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D223821B84E6A00239030 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		2F0FCE6F21B6A09F00219A96 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		2F0FCE8E21B71B4E00219A96 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2F0FCE8F21B724BC00219A96 /* CocoaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaHelper.swift; sourceTree = "<group>"; };
+		2F2D223821B84E6A00239030 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				2F0FCE5821B4527E00219A96 /* AppDelegate.swift */,
 				2F0FCE8F21B724BC00219A96 /* CocoaHelper.swift */,
 				2F0FCE6821B4565400219A96 /* PopoverViewController.swift */,
+				2F2D223821B84E6A00239030 /* Settings.swift */,
 				2F0FCE5C21B4527F00219A96 /* Assets.xcassets */,
 				2F0FCE5E21B4527F00219A96 /* Main.storyboard */,
 				2F0FCE6A21B45AB300219A96 /* EventMonitor.swift */,
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2D223921B84E6A00239030 /* Settings.swift in Sources */,
 				2F0FCE6D21B69D9800219A96 /* AccessibilityHelper.swift in Sources */,
 				2F0FCE6B21B45AB300219A96 /* EventMonitor.swift in Sources */,
 				2F0FCE5921B4527E00219A96 /* AppDelegate.swift in Sources */,

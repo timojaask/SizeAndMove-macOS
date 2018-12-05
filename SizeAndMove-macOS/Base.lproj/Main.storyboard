@@ -685,13 +685,179 @@
             <objects>
                 <viewController storyboardIdentifier="PopoverViewController" id="XfG-lQ-9wD" customClass="PopoverViewController" customModule="SizeAndMove_macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="166"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0UD-MG-5nb">
+                                <rect key="frame" x="18" y="129" width="37" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Move" id="DIH-ab-PWO">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="bottom" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mbc-sa-Aih">
+                                <rect key="frame" x="87" y="131" width="372" height="14"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1YL-y4-TzW">
+                                        <rect key="frame" x="-2" y="-2" width="97" height="18"/>
+                                        <buttonCell key="cell" type="check" title="shift ⇧" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3DT-xh-g85">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="moveShiftToggled:" target="XfG-lQ-9wD" id="8Kw-KY-de6"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0mU-yo-OMh">
+                                        <rect key="frame" x="91" y="-2" width="97" height="18"/>
+                                        <buttonCell key="cell" type="check" title="control ⌃" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CeS-oQ-T90">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="moveControlToggled:" target="XfG-lQ-9wD" id="9p5-lm-ji8"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FHO-P3-GyB">
+                                        <rect key="frame" x="184" y="-2" width="97" height="18"/>
+                                        <buttonCell key="cell" type="check" title="option ⌥" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="j1w-QI-EPl">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="moveOptionToggle:" target="XfG-lQ-9wD" id="tv8-En-xnG"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="viL-3e-HoW">
+                                        <rect key="frame" x="277" y="-2" width="97" height="18"/>
+                                        <buttonCell key="cell" type="check" title="command ⌘" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="aRp-ky-TUL">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="moveCommandToggle:" target="XfG-lQ-9wD" id="aJ3-1W-QVd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9CF-Dp-mdK">
+                                <rect key="frame" x="18" y="92" width="44" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Resize" id="iDE-aa-S6j">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="bottom" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fru-Mo-9zy">
+                                <rect key="frame" x="87" y="94" width="372" height="14"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-Il-foq">
+                                        <rect key="frame" x="-2" y="-2" width="97" height="18"/>
+                                        <buttonCell key="cell" type="check" title="shift ⇧" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="6fO-e9-Pph">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="resizeShiftToggled:" target="XfG-lQ-9wD" id="qyI-5x-aOY"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZkP-Ze-N29">
+                                        <rect key="frame" x="91" y="-2" width="97" height="18"/>
+                                        <buttonCell key="cell" type="check" title="control ⌃" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="sNi-3r-n32">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="resizeControlToggled:" target="XfG-lQ-9wD" id="O5j-aq-EiZ"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4MH-b3-plO">
+                                        <rect key="frame" x="184" y="-2" width="97" height="18"/>
+                                        <buttonCell key="cell" type="check" title="option ⌥" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="7BP-Fs-DD2">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="resizeOptionToggle:" target="XfG-lQ-9wD" id="L95-Ck-elx"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ljx-F4-uEX">
+                                        <rect key="frame" x="277" y="-2" width="97" height="18"/>
+                                        <buttonCell key="cell" type="check" title="command ⌘" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="56n-MZ-3hl">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="resizeCommandToggle:" target="XfG-lQ-9wD" id="FLy-FG-1hq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Grl-Nc-Z2W">
+                                <rect key="frame" x="309" y="13" width="157" height="32"/>
+                                <buttonCell key="cell" type="push" title="Quit Size and Move" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Bux-UO-ZnV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="4M3-Ha-0Dm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="0UD-MG-5nb" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="3H5-2t-hCY"/>
+                            <constraint firstAttribute="trailing" secondItem="Grl-Nc-Z2W" secondAttribute="trailing" constant="20" id="4Ai-pW-vVx"/>
+                            <constraint firstItem="Mbc-sa-Aih" firstAttribute="leading" secondItem="0UD-MG-5nb" secondAttribute="trailing" constant="34" id="8mm-E1-fJo"/>
+                            <constraint firstItem="Mbc-sa-Aih" firstAttribute="centerY" secondItem="0UD-MG-5nb" secondAttribute="centerY" id="KrY-BW-X9J"/>
+                            <constraint firstItem="9CF-Dp-mdK" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="KuZ-eQ-MZH"/>
+                            <constraint firstItem="9CF-Dp-mdK" firstAttribute="top" secondItem="0UD-MG-5nb" secondAttribute="bottom" constant="20" id="RSA-uT-r7P"/>
+                            <constraint firstAttribute="bottom" secondItem="Grl-Nc-Z2W" secondAttribute="bottom" constant="20" id="X5n-he-NAv"/>
+                            <constraint firstItem="0UD-MG-5nb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Yd7-MQ-d2x"/>
+                            <constraint firstItem="fru-Mo-9zy" firstAttribute="trailing" secondItem="Mbc-sa-Aih" secondAttribute="trailing" id="dDL-8U-eZi"/>
+                            <constraint firstItem="fru-Mo-9zy" firstAttribute="centerY" secondItem="9CF-Dp-mdK" secondAttribute="centerY" id="m11-C3-IUE"/>
+                            <constraint firstAttribute="trailing" secondItem="Mbc-sa-Aih" secondAttribute="trailing" constant="21" id="s3m-qb-8UB"/>
+                            <constraint firstItem="fru-Mo-9zy" firstAttribute="leading" secondItem="9CF-Dp-mdK" secondAttribute="trailing" constant="27" id="vTw-qk-lIi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moveCommand" destination="viL-3e-HoW" id="34c-V7-GNa"/>
+                        <outlet property="moveControl" destination="0mU-yo-OMh" id="CGW-mI-449"/>
+                        <outlet property="moveOption" destination="FHO-P3-GyB" id="Nl1-Vb-jFQ"/>
+                        <outlet property="moveShift" destination="1YL-y4-TzW" id="43a-x1-Rxv"/>
+                        <outlet property="resizeCommand" destination="ljx-F4-uEX" id="ElW-xs-o1u"/>
+                        <outlet property="resizeControl" destination="ZkP-Ze-N29" id="2zV-Pe-oTp"/>
+                        <outlet property="resizeOption" destination="4MH-b3-plO" id="qZR-HG-RcN"/>
+                        <outlet property="resizeShift" destination="VcC-Il-foq" id="BEb-Da-QXM"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="578"/>
         </scene>
     </scenes>
 </document>
