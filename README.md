@@ -2,8 +2,6 @@
 Easy app moving and resizing using modifier keys and mouse movement for macOS
 
 ## Improvement ideas
-- Ability to change key bindings
-- Onboarding (Accessibility instructions)
 - Start on login
 
 ## Notes
@@ -13,3 +11,10 @@ Easy app moving and resizing using modifier keys and mouse movement for macOS
 - Resizing Xcode messes up one of the Xcode's toolbars. This is same for other apps of this kind. Assume cannot be fixed.
 - Really laggy wth some apps, such as Slack. This is the same for other apps of this kind. Assume cannot be fixed.
 - It kinda works when moving from one monitor to another, but not always (LOL). Competitor apps act the same, so, probably nothing can be done about this.
+
+## Accessibility perimissions checker
+
+1. see if has permissions (no system popup). If yes, proceed to launching app. If no, proceed to 2
+2. display a window that explains the issue and have a "Open accessibility..." button
+3. Open system preferences
+4. display step-by-step instructions

@@ -15,10 +15,17 @@
 		2F0FCE6D21B69D9800219A96 /* AccessibilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FCE6C21B69D9800219A96 /* AccessibilityHelper.swift */; };
 		2F0FCE9021B724BC00219A96 /* CocoaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FCE8F21B724BC00219A96 /* CocoaHelper.swift */; };
 		2F2D223921B84E6A00239030 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D223821B84E6A00239030 /* Settings.swift */; };
+		2F2D223B21B85DA200239030 /* AccessibilityInstructionsPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D223A21B85DA200239030 /* AccessibilityInstructionsPage1ViewController.swift */; };
+		2F2D223D21B8606400239030 /* AccessibilityInstructionsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D223C21B8606400239030 /* AccessibilityInstructionsWindow.swift */; };
+		2F2D224021B8894800239030 /* AccessibilityInstructionsPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D223F21B8894800239030 /* AccessibilityInstructionsPage2ViewController.swift */; };
+		2F2D224221B980EA00239030 /* AccessibilityInstructionsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D224121B980EA00239030 /* AccessibilityInstructionsContainer.swift */; };
+		2F607F9621B9C9AA00439F46 /* AccessibilityInstructionsPage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F607F9521B9C9AA00439F46 /* AccessibilityInstructionsPage3ViewController.swift */; };
+		2F607F9821B9CA2100439F46 /* AccessibilityInstructionsPage4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F607F9721B9CA2100439F46 /* AccessibilityInstructionsPage4ViewController.swift */; };
+		2F607F9A21B9CB6000439F46 /* AccessibilityInstructionsPage5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F607F9921B9CB6000439F46 /* AccessibilityInstructionsPage5ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F0FCE5521B4527E00219A96 /* SizeAndMove-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SizeAndMove-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F0FCE5521B4527E00219A96 /* SizeAndMove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SizeAndMove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0FCE5821B4527E00219A96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F0FCE5C21B4527F00219A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F0FCE5F21B4527F00219A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,6 +38,13 @@
 		2F0FCE8E21B71B4E00219A96 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2F0FCE8F21B724BC00219A96 /* CocoaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaHelper.swift; sourceTree = "<group>"; };
 		2F2D223821B84E6A00239030 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		2F2D223A21B85DA200239030 /* AccessibilityInstructionsPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsPage1ViewController.swift; sourceTree = "<group>"; };
+		2F2D223C21B8606400239030 /* AccessibilityInstructionsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsWindow.swift; sourceTree = "<group>"; };
+		2F2D223F21B8894800239030 /* AccessibilityInstructionsPage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsPage2ViewController.swift; sourceTree = "<group>"; };
+		2F2D224121B980EA00239030 /* AccessibilityInstructionsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsContainer.swift; sourceTree = "<group>"; };
+		2F607F9521B9C9AA00439F46 /* AccessibilityInstructionsPage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsPage3ViewController.swift; sourceTree = "<group>"; };
+		2F607F9721B9CA2100439F46 /* AccessibilityInstructionsPage4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsPage4ViewController.swift; sourceTree = "<group>"; };
+		2F607F9921B9CB6000439F46 /* AccessibilityInstructionsPage5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsPage5ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +71,7 @@
 		2F0FCE5621B4527E00219A96 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2F0FCE5521B4527E00219A96 /* SizeAndMove-macOS.app */,
+				2F0FCE5521B4527E00219A96 /* SizeAndMove.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,8 +85,8 @@
 				2F2D223821B84E6A00239030 /* Settings.swift */,
 				2F0FCE5C21B4527F00219A96 /* Assets.xcassets */,
 				2F0FCE5E21B4527F00219A96 /* Main.storyboard */,
+				2F2D223E21B884E300239030 /* AccessibilityHelper */,
 				2F0FCE6A21B45AB300219A96 /* EventMonitor.swift */,
-				2F0FCE6C21B69D9800219A96 /* AccessibilityHelper.swift */,
 				2F0FCE6121B4527F00219A96 /* Info.plist */,
 				2F0FCE6221B4527F00219A96 /* SizeAndMove_macOS.entitlements */,
 			);
@@ -87,12 +101,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2F2D223E21B884E300239030 /* AccessibilityHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2F2D223C21B8606400239030 /* AccessibilityInstructionsWindow.swift */,
+				2F2D224121B980EA00239030 /* AccessibilityInstructionsContainer.swift */,
+				2F2D223A21B85DA200239030 /* AccessibilityInstructionsPage1ViewController.swift */,
+				2F2D223F21B8894800239030 /* AccessibilityInstructionsPage2ViewController.swift */,
+				2F607F9521B9C9AA00439F46 /* AccessibilityInstructionsPage3ViewController.swift */,
+				2F607F9721B9CA2100439F46 /* AccessibilityInstructionsPage4ViewController.swift */,
+				2F607F9921B9CB6000439F46 /* AccessibilityInstructionsPage5ViewController.swift */,
+				2F0FCE6C21B69D9800219A96 /* AccessibilityHelper.swift */,
+			);
+			path = AccessibilityHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2F0FCE5421B4527E00219A96 /* SizeAndMove-macOS */ = {
+		2F0FCE5421B4527E00219A96 /* SizeAndMove */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F0FCE6521B4527F00219A96 /* Build configuration list for PBXNativeTarget "SizeAndMove-macOS" */;
+			buildConfigurationList = 2F0FCE6521B4527F00219A96 /* Build configuration list for PBXNativeTarget "SizeAndMove" */;
 			buildPhases = (
 				2F0FCE5121B4527E00219A96 /* Sources */,
 				2F0FCE5221B4527E00219A96 /* Frameworks */,
@@ -102,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = "SizeAndMove-macOS";
+			name = SizeAndMove;
 			productName = "SizeAndMove-macOS";
-			productReference = 2F0FCE5521B4527E00219A96 /* SizeAndMove-macOS.app */;
+			productReference = 2F0FCE5521B4527E00219A96 /* SizeAndMove.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +164,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F0FCE5421B4527E00219A96 /* SizeAndMove-macOS */,
+				2F0FCE5421B4527E00219A96 /* SizeAndMove */,
 			);
 		};
 /* End PBXProject section */
@@ -158,11 +187,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2D223921B84E6A00239030 /* Settings.swift in Sources */,
+				2F607F9A21B9CB6000439F46 /* AccessibilityInstructionsPage5ViewController.swift in Sources */,
+				2F2D223B21B85DA200239030 /* AccessibilityInstructionsPage1ViewController.swift in Sources */,
+				2F607F9821B9CA2100439F46 /* AccessibilityInstructionsPage4ViewController.swift in Sources */,
 				2F0FCE6D21B69D9800219A96 /* AccessibilityHelper.swift in Sources */,
+				2F2D224221B980EA00239030 /* AccessibilityInstructionsContainer.swift in Sources */,
+				2F607F9621B9C9AA00439F46 /* AccessibilityInstructionsPage3ViewController.swift in Sources */,
 				2F0FCE6B21B45AB300219A96 /* EventMonitor.swift in Sources */,
 				2F0FCE5921B4527E00219A96 /* AppDelegate.swift in Sources */,
+				2F2D223D21B8606400239030 /* AccessibilityInstructionsWindow.swift in Sources */,
 				2F0FCE9021B724BC00219A96 /* CocoaHelper.swift in Sources */,
 				2F0FCE6921B4565400219A96 /* PopoverViewController.swift in Sources */,
+				2F2D224021B8894800239030 /* AccessibilityInstructionsPage2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F0FCE6521B4527F00219A96 /* Build configuration list for PBXNativeTarget "SizeAndMove-macOS" */ = {
+		2F0FCE6521B4527F00219A96 /* Build configuration list for PBXNativeTarget "SizeAndMove" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2F0FCE6621B4527F00219A96 /* Debug */,

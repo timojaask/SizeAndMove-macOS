@@ -55,7 +55,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var trackingState: TrackingState?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        AccessibilityHelper.askForAccessibilityIfNeeded()
+        let hasAccess = AccessibilityHelper.checkAccess()
+        if !hasAccess {
+            self.showAccessibilityInstructions()
+        }
         
         // Configure status bar icon and popover
         if let button = statusItem.button {
@@ -128,6 +131,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
         }
         
+    }
+    
+    var instructionsWindow: AccessibilityInstructionsWindow!
+    
+    func showAccessibilityInstructions() {
+        self.instructionsWindow = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "AccessibilityInstructionsWindow") as? AccessibilityInstructionsWindow
+        self.instructionsWindow?.showWindow(self)
     }
     
     func showPopover(sender: Any?) {
