@@ -22,6 +22,7 @@
 		2F607F9621B9C9AA00439F46 /* AccessibilityInstructionsPage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F607F9521B9C9AA00439F46 /* AccessibilityInstructionsPage3ViewController.swift */; };
 		2F607F9821B9CA2100439F46 /* AccessibilityInstructionsPage4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F607F9721B9CA2100439F46 /* AccessibilityInstructionsPage4ViewController.swift */; };
 		2F607F9A21B9CB6000439F46 /* AccessibilityInstructionsPage5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F607F9921B9CB6000439F46 /* AccessibilityInstructionsPage5ViewController.swift */; };
+		2F6A69F923E733020072D632 /* SizeAndMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6A69F823E733020072D632 /* SizeAndMove.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		2F607F9521B9C9AA00439F46 /* AccessibilityInstructionsPage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsPage3ViewController.swift; sourceTree = "<group>"; };
 		2F607F9721B9CA2100439F46 /* AccessibilityInstructionsPage4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsPage4ViewController.swift; sourceTree = "<group>"; };
 		2F607F9921B9CB6000439F46 /* AccessibilityInstructionsPage5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityInstructionsPage5ViewController.swift; sourceTree = "<group>"; };
+		2F6A69F823E733020072D632 /* SizeAndMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeAndMove.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				2F0FCE5821B4527E00219A96 /* AppDelegate.swift */,
+				2F6A69F823E733020072D632 /* SizeAndMove.swift */,
 				2F0FCE8F21B724BC00219A96 /* CocoaHelper.swift */,
 				2F0FCE6A21B45AB300219A96 /* EventMonitor.swift */,
 				2F0FCE6821B4565400219A96 /* PopoverViewController.swift */,
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2D223921B84E6A00239030 /* Settings.swift in Sources */,
+				2F6A69F923E733020072D632 /* SizeAndMove.swift in Sources */,
 				2F607F9A21B9CB6000439F46 /* AccessibilityInstructionsPage5ViewController.swift in Sources */,
 				2F2D223B21B85DA200239030 /* AccessibilityInstructionsPage1ViewController.swift in Sources */,
 				2F607F9821B9CA2100439F46 /* AccessibilityInstructionsPage4ViewController.swift in Sources */,

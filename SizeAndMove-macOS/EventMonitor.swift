@@ -24,4 +24,8 @@ public class EventMonitor {
             monitor = nil
         }
     }
+    
+    public static func mouseMovedMonitor(handler: @escaping (NSEvent?) -> Void) -> EventMonitor {
+        return EventMonitor(mask: [.mouseMoved], handler: handler)
+    }
 }

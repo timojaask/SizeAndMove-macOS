@@ -1,5 +1,6 @@
 import Cocoa
-// A bunch of functions that read from weird system APIs
+
+// A collection of functions that simplify working with Cocoa APIs, such as reading mouse curor, moving and resizing windows.
 
 struct CocoaHelper {
     
