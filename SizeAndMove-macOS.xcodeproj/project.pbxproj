@@ -81,12 +81,12 @@
 			children = (
 				2F0FCE5821B4527E00219A96 /* AppDelegate.swift */,
 				2F0FCE8F21B724BC00219A96 /* CocoaHelper.swift */,
+				2F0FCE6A21B45AB300219A96 /* EventMonitor.swift */,
 				2F0FCE6821B4565400219A96 /* PopoverViewController.swift */,
 				2F2D223821B84E6A00239030 /* Settings.swift */,
 				2F0FCE5C21B4527F00219A96 /* Assets.xcassets */,
 				2F0FCE5E21B4527F00219A96 /* Main.storyboard */,
 				2F2D223E21B884E300239030 /* AccessibilityHelper */,
-				2F0FCE6A21B45AB300219A96 /* EventMonitor.swift */,
 				2F0FCE6121B4527F00219A96 /* Info.plist */,
 				2F0FCE6221B4527F00219A96 /* SizeAndMove_macOS.entitlements */,
 			);
