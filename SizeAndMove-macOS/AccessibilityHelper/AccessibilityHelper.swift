@@ -2,15 +2,15 @@ import AppKit
 import Foundation
 
 struct AccessibilityHelper {
-    
     static func openAccessibilityPreferences() {
-        let macOS10version = ProcessInfo.processInfo.operatingSystemVersion.minorVersion
+        let openAccessibilityPreferncesScript = """
+            tell application \"System Preferences\"
+            reveal anchor \"Privacy_Accessibility\" of pane id \"com.apple.preference.security\"
+            activate
+            end tell
+            """
         
-        let script = macOS10version < 9
-            ? "tell application \"System Preferences\" \n set the current pane to pane id \"com.apple.preference.universalaccess\" \n activate \n end tell"
-            : "tell application \"System Preferences\" \n reveal anchor \"Privacy_Accessibility\" of pane id \"com.apple.preference.security\" \n activate \n end tell"
-        
-        NSAppleScript(source: script)?.executeAndReturnError(nil)
+        NSAppleScript(source: openAccessibilityPreferncesScript)?.executeAndReturnError(nil)
     }
     
     static func checkAccess() -> Bool {
