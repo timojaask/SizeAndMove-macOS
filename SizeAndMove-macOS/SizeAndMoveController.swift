@@ -1,6 +1,6 @@
 import Cocoa
 
-class SizeAndMove {
+class SizeAndMoveController {
     
     private var targetWindow: TargetWindow?
     private var mouseMovedEventMonitor: EventMonitor?

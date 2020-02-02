@@ -28,4 +28,8 @@ public class EventMonitor {
     public static func mouseMovedMonitor(handler: @escaping (NSEvent?) -> Void) -> EventMonitor {
         return EventMonitor(mask: [.mouseMoved], handler: handler)
     }
+    
+    public static func mouseClickedMonitor(handler: @escaping (NSEvent?) -> Void) -> EventMonitor {
+        return EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: handler)
+    }
 }
