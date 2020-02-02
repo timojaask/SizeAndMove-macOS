@@ -1,5 +1,5 @@
 # SizeAndMove
-Easy app moving and resizing using modifier keys and mouse movement for macOS
+macOS utility for moving and resizing windows easily using mouse and modifier keys
 
 ## Improvement ideas
 - Start on login
